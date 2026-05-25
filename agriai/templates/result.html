@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Analysis Result | AGRI AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+href="{% static 'css/result.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="result-wrapper">
+
+    <!-- HERO -->
+
+    <div class="result-hero glass-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1>
+            Analysis Complete
+        </h1>
+
+        <p>
+            Your AI-powered agricultural report
+            has been successfully generated.
+        </p>
+
+    </div>
+
+
+    <!-- STATUS CARD -->
+
+    <div class="glass-card report-status-card">
+
+        <h2>
+            🌱 Agricultural Report Ready
+        </h2>
+
+        <p>
+
+            Soil sensor data, climate conditions,
+            and AI analysis have been successfully
+            processed.
+
+            Your professional agricultural
+            intelligence report is now ready
+            for download.
+
+        </p>
+
+    </div>
+
+
+    <!-- OPTIONAL SMALL INFO -->
+
+    <div class="glass-card mini-info-card">
+
+        <div class="info-item">
+            ✓ Soil Data Processed
+        </div>
+
+        <div class="info-item">
+            ✓ Climate Analysis Complete
+        </div>
+
+        <div class="info-item">
+            ✓ AI Recommendation Generated
+        </div>
+
+        <div class="info-item">
+            ✓ PDF Report Ready
+        </div>
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="result-buttons">
+
+        <a href="{% url 'download_report' %}"
+           class="download-btn">
+
+            Download Full Report
+
+        </a>
+
+        <a href="{% url 'home' %}"
+           class="new-analysis-btn">
+
+            Start New Analysis
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

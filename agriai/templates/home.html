@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home | AGRI AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+
+    <p class="mini-title">A.G.R.I.</p>
+
+    <h1 class="main-heading">
+        Advanced Ground Reporting Intelligence
+    </h1>
+
+    <h2 class="tagline">
+        AI Powered Smart Soil Analysis System
+    </h2>
+
+    <p class="hero-description">
+
+        AGRI is an intelligent agricultural analysis system that uses
+        soil sensor data, climate information, and artificial intelligence
+        to understand soil behavior and generate smart farming recommendations.
+
+    </p>
+
+    <a href="{% url 'collect' %}" class="start-btn">
+        Start Analysis
+    </a>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features-section">
+
+    <div class="feature-card glass-card">
+
+        <h3>Smart Soil Detection</h3>
+
+        <p>
+            Sensor based soil analysis
+        </p>
+
+    </div>
+
+
+    <div class="feature-card glass-card">
+
+        <h3>Climate Intelligence</h3>
+
+        <p>
+            Location based climate insights
+        </p>
+
+    </div>
+
+
+    <div class="feature-card glass-card">
+
+        <h3>AI Soil Analysis</h3>
+
+        <p>
+            AI powered agricultural predictions
+        </p>
+
+    </div>
+
+
+    <div class="feature-card glass-card">
+
+        <h3>Professional Report</h3>
+
+        <p>
+            Download detailed soil report
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WORKFLOW ================= -->
+
+<section class="workflow-section">
+
+    <h2 class="workflow-heading">
+        How It Works
+    </h2>
+
+    <div class="workflow-steps">
+
+        <div class="step glass-card">
+            Collect Data
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div class="step glass-card">
+            Analyze
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div class="step glass-card">
+            Generate Report
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOTTOM LINE ================= -->
+
+<section class="bottom-line">
+
+    <p>
+        Empowering Smarter Agriculture Through Artificial Intelligence 🌱
+    </p>
+
+</section>
+
+{% endblock %}

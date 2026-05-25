@@ -1,0 +1,234 @@
+/* =========================
+   WRAPPER
+========================= */
+
+.collect-wrapper{
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.collect-header{
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+.collect-header h1{
+
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+
+    color: #F8F9FA;
+
+}
+
+.collect-header p{
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 1.05rem;
+
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.collect-card{
+
+    width: 100%;
+
+    max-width: 720px;
+
+    padding: 45px;
+
+    border-radius: 28px;
+
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group{
+
+    margin-bottom: 28px;
+
+}
+
+.form-group label{
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-weight: 500;
+
+    color: #EAF4F4;
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================
+   SELECT BOX
+========================= */
+
+.form-group select{
+
+    width: 100%;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    background: rgba(255,255,255,0.08);
+
+    color: #F8F9FA;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+
+}
+
+.form-group select:focus{
+
+    border-color: #95D5B2;
+
+    box-shadow:
+        0 0 18px rgba(149,213,178,0.20);
+
+}
+
+
+/* =========================
+   OPTIONS COLOR FIX
+========================= */
+
+.form-group option{
+
+    color: #111827;
+
+}
+
+
+/* =========================
+   NOTICE BOX
+========================= */
+
+.notice-box{
+
+    margin-top: 10px;
+
+    margin-bottom: 35px;
+
+    padding: 18px 22px;
+
+    border-radius: 18px;
+
+    background: rgba(149,213,178,0.10);
+
+    border: 1px solid rgba(149,213,178,0.25);
+
+    color: #D8F3DC;
+
+    line-height: 1.8;
+
+    font-size: 0.95rem;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.collect-btn{
+
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        135deg,
+        #1B4332,
+        #2D6A4F
+    );
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    transition: all 0.35s ease;
+
+    box-shadow:
+        0 10px 28px rgba(45,106,79,0.35);
+
+}
+
+.collect-btn:hover{
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(149,213,178,0.25);
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+    .collect-header h1{
+
+        font-size: 2.2rem;
+
+    }
+
+    .collect-card{
+
+        padding: 28px;
+
+    }
+
+}

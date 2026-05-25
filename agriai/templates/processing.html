@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Processing | AGRI AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/processing.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="processing-wrapper">
+
+    <!-- ================= PROGRESS BAR ================= -->
+
+    <div class="progress-container glass-card">
+
+        <div class="progress-step active-step">
+            ✓ Step 1 <span>Collect Data</span>
+        </div>
+
+        <div class="progress-line active-line"></div>
+
+        <div class="progress-step active-step">
+            ✓ Step 2 <span>Processing</span>
+        </div>
+
+        <div class="progress-line"></div>
+
+        <div class="progress-step">
+            ○ Step 3 <span>Analysis</span>
+        </div>
+
+        <div class="progress-line"></div>
+
+        <div class="progress-step">
+            ○ Step 4 <span>Report</span>
+        </div>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <div class="processing-header">
+
+        <h1>
+            Data Collection Complete
+        </h1>
+
+        <p>
+            Review all collected soil and environmental information
+            before starting analysis.
+        </p>
+
+    </div>
+
+
+    <!-- ================= GRID ================= -->
+
+    <div class="processing-grid">
+
+        <!-- SENSOR CARD -->
+
+       <div class="glass-card info-card">
+
+    <h2>📡 Sensor Readings</h2>
+
+    <div class="info-row">
+        <span>Soil Moisture</span>
+        <strong>{{ moisture }}%</strong>
+    </div>
+
+    <div class="info-row">
+        <span>Soil pH</span>
+        <strong>{{ ph }}</strong>
+    </div>
+
+    <div class="info-row">
+        <span>Conductivity / TDS</span>
+        <strong>{{ tds }}</strong>
+    </div>
+
+    <div class="info-row">
+        <span>Latitude</span>
+        <strong>{{ latitude }}</strong>
+    </div>
+
+    <div class="info-row">
+        <span>Longitude</span>
+        <strong>{{ longitude }}</strong>
+    </div>
+
+</div>
+
+
+        <!-- SOIL CARD -->
+
+        <div class="glass-card info-card">
+
+            <h2>🌱 Soil Information</h2>
+
+            <div class="info-row">
+                <span>Soil Color</span>
+                <strong>{{ soil_color }}</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Soil Texture</span>
+                <strong>{{ soil_texture }}</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Sampling Depth</span>
+                <strong>{{ soil_depth }}</strong>
+            </div>
+
+        </div>
+
+
+        <!-- CLIMATE CARD -->
+
+        <div class="glass-card info-card">
+
+            <h2>🌦 Environmental Conditions</h2>
+
+            <div class="info-row">
+                <span>Location</span>
+                <strong>{{ location }}</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Climate Zone</span>
+                <strong>{{ climate_zone }}</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Average Rainfall</span>
+                <strong>{{ average_rainfall }}</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Temperature Range</span>
+                <strong>{{ temperature_range }}</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Seasonal Pattern</span>
+                <strong>{{ seasonal_pattern }}</strong>
+            </div>
+
+        </div>
+
+
+        <!-- STATUS CARD -->
+
+        <div class="glass-card info-card">
+
+            <h2>🤖 System Status</h2>
+
+            <div class="status-item success">
+                ✓ Sensor Data Received
+            </div>
+
+            <div class="status-item success">
+                ✓ Location Verified
+            </div>
+
+            <div class="status-item success">
+                ✓ Climate Data Ready
+            </div>
+
+            <div class="status-item success">
+                ✓ AI Model Ready
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= BUTTON ================= -->
+
+    <div class="analysis-btn-container">
+
+        <a href="{% url 'result' %}" class="analysis-btn">
+
+            Begin AI Analysis
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

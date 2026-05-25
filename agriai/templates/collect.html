@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Collect Soil Data | AGRI AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/collect.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="collect-wrapper">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="collect-header">
+
+        <h1>
+            Soil Data Collection
+        </h1>
+
+        <p>
+            Select soil properties and collect live sensor data.
+        </p>
+
+    </div>
+
+
+    <!-- ================= FORM CARD ================= -->
+
+    <div class="collect-card glass-card">
+
+        <form action="{% url 'trigger_collection' %}">
+
+            {% csrf_token %}
+
+            <!-- SOIL COLOR -->
+
+            <div class="form-group">
+
+                <label for="soil_color">
+                    Select Soil Color
+                </label>
+
+                <select name="soil_color" id="soil_color" required>
+
+                    <option value="">Choose Soil Color</option>
+
+                    <option value="Dark Brown">Dark Brown</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Grey">Grey</option>
+                    <option value="Light Brown">Light Brown</option>
+                    <option value="Reddish Brown">Reddish Brown</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SOIL TEXTURE -->
+
+            <div class="form-group">
+
+                <label for="soil_texture">
+                    Select Soil Texture
+                </label>
+
+                <select name="soil_texture" id="soil_texture" required>
+
+                    <option value="">Choose Soil Texture</option>
+
+                    <option value="Alluvial">Alluvial</option>
+                    <option value="Clayey">Clayey</option>
+                    <option value="Laterite">Laterite</option>
+                    <option value="Loamy">Loamy</option>
+                    <option value="Sandy Loam">Sandy Loam</option>
+                    <option value="Sandy">Sandy</option>
+                    <option value="Silty">Silty</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SOIL DEPTH -->
+
+            <div class="form-group">
+
+                <label for="soil_depth">
+                    Soil Sampling Depth
+                </label>
+
+                <select name="soil_depth" id="soil_depth" required>
+
+                    <option value="">Choose Sampling Depth</option>
+
+                    <option value="0-15 cm">0–15 cm</option>
+                    <option value="15-30 cm">15–30 cm</option>
+                    <option value="30-45 cm">30–45 cm</option>
+                    <option value="45-60 cm">45–60 cm</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- NOTICE BOX -->
+
+            <div class="notice-box">
+
+                Make sure the soil sample is collected properly before continuing.
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit" class="collect-btn">
+
+                Collect Data
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

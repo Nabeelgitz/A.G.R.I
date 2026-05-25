@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}AGRI AI{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/backremove.png' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar glass">
+
+        <div class="logo-section">
+            <img src="{% static 'images/backremove.png' %}" alt="AGRI AI Logo" class="logo-img">
+            <h1 class="logo-text">AGRI AI</h1>
+        </div>
+
+        <nav class="nav-links">
+            <a href="{% url 'home' %}" class="nav-btn">Home</a>
+            <a href="{% url 'about' %}" class="nav-btn">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-container">
+
+        <div class="content-card glass">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer glass">
+        <p>
+            © 2026 AGRI AI • Smart Agriculture Intelligence Platform
+        </p>
+    </footer>
+
+
+    <!-- Main JS -->
+    <script src="{% static 'js/base.js' %}"></script>
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>
